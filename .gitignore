@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Caché de descargas de Wikipedia (se puede regenerar con el script)
+dataset/cache/
