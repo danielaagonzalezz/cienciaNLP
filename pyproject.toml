@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ciencianlp"
+version = "0.1.0"
+description = "Librería de NLP basada en reglas para esperanto (práctica de Minería de Textos)"
+requires-python = ">=3.9"
+# La librería se construye desde cero: sin spaCy, NLTK, Stanza, etc.
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest"]
+# Dependencias del script del dataset (no de la librería)
+dataset = ["requests", "pandas"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
