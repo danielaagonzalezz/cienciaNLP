@@ -1,0 +1,5 @@
+# Versiones fijadas (las mismas con las que se probó la documentación): reproducibilidad.
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+mkdocstrings==1.0.8
+mkdocstrings-python==2.0.10
