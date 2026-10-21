@@ -12,8 +12,7 @@ Uso:
     python scripts/build_dataset.py
     python scripts/build_dataset.py --per-class 400 --out data/dataset.csv
 
-Dependencias: requests y esperantilo (solo para este script, nunca para la librería):
-    pip install requests git+https://github.com/jparisu/nlp-esperantilo.git
+Dependencias: requests.
 """
 from __future__ import annotations
 
@@ -27,12 +26,11 @@ from collections import deque
 from pathlib import Path
 
 import requests
-from esperantilo import WikiPage  # función de Wikipedia de la guía (solo para este script)
 
 API_URL = "https://eo.wikipedia.org/w/api.php"
 HEADERS = {"User-Agent": "CUNEF-MineriaTextos-Practica/1.0 (proyecto educativo)"}
 TIMEOUT = 30
-PAUSE = 1.0        # segundos entre peticiones
+PAUSE = 0.3        # segundos entre peticiones
 MAX_RETRIES = 6    # reintentos ante 429 / errores de servidor
 MAX_CANDIDATES = 1000  # artículos que se recogen como máximo por clase
 
@@ -107,29 +105,14 @@ def collect_titles(seeds: list[str], depth: int) -> list[str]:
     return list(titles)
 
 
-def look_up_page(title: str) -> WikiPage | None:
-    """Descarga un artículo con ``WikiPage``. None si no existe en la Wikipedia en Esperanto.
-
-    ``WikiPage`` no reintenta, así que aquí se espera y se reintenta si Wikipedia limita
-    el ritmo (429), falla (5xx) o hay un corte de red.
-    """
-    for attempt in range(MAX_RETRIES):
-        try:
-            return WikiPage.look_up(title, language="eo", fallback_languages=(),
-                                    any_language=False, timeout=TIMEOUT)
-        except ValueError:
-            return None
-        except requests.RequestException as exc:
-            response = getattr(exc, "response", None)
-            status = getattr(response, "status_code", None)
-            if status is not None and status != 429 and status < 500:
-                raise  # error no recuperable (p. ej. 404): no se reintenta
-            retry_after = response.headers.get("Retry-After", "") if response is not None else ""
-            wait = int(retry_after) if retry_after.isdigit() else 5 * 2 ** attempt
-            print(f"[AVISO] '{title}': {exc.__class__.__name__} (HTTP {status}): espero {wait}s "
-                  f"y reintento ({attempt + 1}/{MAX_RETRIES}).", file=sys.stderr)
-            time.sleep(wait)
-    raise requests.RequestException(f"Sin respuesta válida tras {MAX_RETRIES} intentos")
+def get_extract(title: str) -> str:
+    """Texto plano del artículo; las secciones aparecen como ``== Título ==``."""
+    data = api_get({"action": "query", "prop": "extracts", "explaintext": 1,
+                    "exsectionformat": "wiki", "redirects": 1, "titles": title})
+    pages = data.get("query", {}).get("pages", [])
+    if not pages or pages[0].get("missing"):
+        return ""
+    return pages[0].get("extract", "") or ""
 
 
 def clean_paragraph(raw: str, min_chars: int = 100) -> str | None:
@@ -145,23 +128,20 @@ def clean_paragraph(raw: str, min_chars: int = 100) -> str | None:
     return text
 
 
-def get_paragraphs(title: str) -> list[str]:
-    """Párrafos limpios de un artículo, sin las secciones finales sin prosa."""
-    page = look_up_page(title)
-    if page is None:
-        return []
+def split_paragraphs(extract: str) -> list[str]:
     paragraphs: list[str] = []
-    for name, text in page.sections.items():
-        if name.strip().lower() in STOP_SECTIONS:
+    for line in extract.splitlines():
+        line = line.strip()
+        if not line:
             continue
-        for line in text.splitlines():
-            line = line.strip()
-            if not line or HEADING.match(line):  # vacías y subencabezados
-                continue
-            cleaned = clean_paragraph(line)
-            if cleaned:
-                paragraphs.append(cleaned)
-    time.sleep(PAUSE)  # cortesía con la API: no lanzar peticiones sin pausa
+        heading = HEADING.match(line)
+        if heading:
+            if heading.group(1).strip().lower() in STOP_SECTIONS:
+                break
+            continue
+        cleaned = clean_paragraph(line)
+        if cleaned:
+            paragraphs.append(cleaned)
     return paragraphs
 
 
@@ -176,7 +156,7 @@ def build_rows(per_class: int, depth: int) -> list[tuple[str, str]]:
             if count >= per_class:
                 break
             try:
-                paragraphs = get_paragraphs(title)
+                paragraphs = split_paragraphs(get_extract(title))
             except requests.RequestException as exc:
                 print(f"[AVISO] Se omite '{title}': {exc}", file=sys.stderr)
                 continue
