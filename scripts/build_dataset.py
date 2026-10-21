@@ -21,6 +21,7 @@ import csv
 import html
 import re
 import sys
+import time
 from collections import deque
 from pathlib import Path
 
@@ -29,6 +30,8 @@ import requests
 API_URL = "https://eo.wikipedia.org/w/api.php"
 HEADERS = {"User-Agent": "CUNEF-MineriaTextos-Practica/1.0 (proyecto educativo)"}
 TIMEOUT = 30
+PAUSE = 0.3        # segundos entre peticiones
+MAX_RETRIES = 6    # reintentos ante 429 / errores de servidor
 MAX_CANDIDATES = 1000  # artículos que se recogen como máximo por clase
 
 # Clase -> categorías semilla en la Wikipedia en Esperanto.
@@ -53,10 +56,22 @@ SPACES = re.compile(r"\s+")
 
 
 def api_get(params: dict) -> dict:
+    """Consulta la API. Si Wikipedia limita el ritmo (429) o falla (5xx), espera y reintenta."""
     params = {**params, "format": "json", "formatversion": 2}
-    response = requests.get(API_URL, params=params, headers=HEADERS, timeout=TIMEOUT)
+    for attempt in range(MAX_RETRIES):
+        response = requests.get(API_URL, params=params, headers=HEADERS, timeout=TIMEOUT)
+        if response.status_code == 429 or response.status_code >= 500:
+            retry_after = response.headers.get("Retry-After", "")
+            wait = int(retry_after) if retry_after.isdigit() else 5 * 2 ** attempt
+            print(f"[AVISO] HTTP {response.status_code}: espero {wait}s y reintento "
+                  f"({attempt + 1}/{MAX_RETRIES}).", file=sys.stderr)
+            time.sleep(wait)
+            continue
+        response.raise_for_status()
+        time.sleep(PAUSE)  # cortesía con la API: no lanzar peticiones sin pausa
+        return response.json()
     response.raise_for_status()
-    return response.json()
+    raise requests.HTTPError(f"Sin respuesta válida tras {MAX_RETRIES} intentos")
 
 
 def category_members(category: str, namespace: int) -> list[str]:
