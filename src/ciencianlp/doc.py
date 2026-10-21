@@ -1,0 +1,57 @@
+"""Objetos Token y Doc, con una API parecida a la de spaCy."""
+
+from ciencianlp.tokenizer import tokenize
+
+
+class Token:
+    """Una palabra o un signo de un texto."""
+
+    def __init__(self, text, idx):
+        self.text = text
+        self.idx = idx  # posición en el texto original
+        # Provisionales: los cambiarán el lematizador, el etiquetador y las stop-words.
+        self.lemma_ = text.lower()
+        self.pos_ = ""
+        self.is_stop = False
+
+    @property  # se usa sin paréntesis: token.is_alpha
+    def is_alpha(self):
+        return self.text.isalpha()
+
+    @property
+    def is_digit(self):
+        return self.text.isdigit()
+
+    @property
+    def is_punct(self):
+        # puntuación = no tiene ninguna letra ni número
+        return not any(c.isalnum() for c in self.text)
+
+    def __repr__(self):
+        return self.text
+
+
+class Doc:
+    """Un texto ya dividido en tokens.
+
+    Example:
+        >>> doc = Doc("La akvo bolas.")
+        >>> [token.text for token in doc]
+        ['La', 'akvo', 'bolas', '.']
+    """
+
+    def __init__(self, text):
+        self.text = text
+        self.tokens = [Token(t, i) for t, i in tokenize(text)]
+
+    def __iter__(self):  # for token in doc
+        return iter(self.tokens)
+
+    def __len__(self):  # len(doc)
+        return len(self.tokens)
+
+    def __getitem__(self, i):  # doc[1]
+        return self.tokens[i]
+
+    def __repr__(self):
+        return self.text
