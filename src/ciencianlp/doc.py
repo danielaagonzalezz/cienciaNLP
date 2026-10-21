@@ -34,7 +34,7 @@ class Token:
 class Doc:
     """Un texto ya dividido en tokens.
 
-    Example:
+    Examples:
         >>> doc = Doc("La akvo bolas.")
         >>> [token.text for token in doc]
         ['La', 'akvo', 'bolas', '.']
