@@ -15,6 +15,9 @@ nav:
   - Inicio: index.md
   - Referencia de la API: api.md
 
+markdown_extensions:
+  - admonition
+  
 plugins:
   - search
   - mkdocstrings:
