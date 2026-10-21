@@ -1,3 +1,4 @@
+#Documento Read the Docs
 site_name: ciencianlp
 site_description: Librería de NLP basada en reglas para esperanto (práctica de Minería de Textos)
 repo_url: https://github.com/danielaagonzalezz/cienciaNLP
@@ -17,7 +18,7 @@ nav:
 
 markdown_extensions:
   - admonition
-  
+
 plugins:
   - search
   - mkdocstrings:
