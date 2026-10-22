@@ -27,3 +27,7 @@ def test_valores_provisionales():
     assert token.lemma_ == "akvo"
     assert token.pos_ == ""
     assert token.is_stop is False
+
+def test_is_stop_se_marca_al_crear_el_doc():
+    doc = Doc("La akvo bolas kaj ĝi estas varma.")
+    assert [t.is_stop for t in doc] == [True, False, False, True, True, True, False, False]
