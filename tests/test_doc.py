@@ -25,7 +25,7 @@ def test_is_alpha_is_digit_is_punct():
 def test_valores_provisionales():
     token = Doc("Akvo")[0]
     assert token.lemma_ == "akvo"
-    assert token.pos_ == ""
+    assert token.pos_ == "NOUN"
     assert token.is_stop is False
 
 def test_is_stop_se_marca_al_crear_el_doc():
