@@ -1,8 +1,8 @@
 """Objetos Token y Doc, con una API parecida a la de spaCy."""
 
+from ciencianlp.pos import etiquetar
 from ciencianlp.stopwords import es_stop_word
 from ciencianlp.tokenizer import tokenize
-
 
 class Token:
     """Una palabra o un signo de un texto."""
@@ -11,9 +11,10 @@ class Token:
         self.text = text
         self.idx = idx  # posición en el texto original
         self.is_stop = es_stop_word(text)
-        # Provisionales: los cambiarán el lematizador, el etiquetador 
+        self.pos_ = etiquetar(text)
+        # Provisional: lo cambiará en el lematizador 
         self.lemma_ = text.lower()
-        self.pos_ = ""
+        
 
     @property  # se usa sin paréntesis: token.is_alpha
     def is_alpha(self):
