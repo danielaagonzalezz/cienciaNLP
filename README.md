@@ -20,7 +20,7 @@ El repositorio tiene tres partes:
 | Repositorio, licencia y tests automáticos | Hecho |
 | Script del dataset y dataset | Hecho |
 | Librería: tokenizador, `Token`/`Doc`, stop-words, etiquetador POS, lematizador | Hecho |
-| Librería: objeto `nlp` y exportación en `__init__.py` | Pendiente |
+| Librería: objeto `nlp` y exportación en `__init__.py` | Hecho |
 | Documentación en Read the Docs | Montada, se completa con la librería |
 | Cuaderno de clasificación (fase 3) | Pendiente |
 
@@ -33,9 +33,9 @@ pip install git+https://github.com/danielaagonzalezz/cienciaNLP.git
 ## Uso
 
 ```python
-from ciencianlp.doc import Doc
+from ciencianlp.doc import nlp
 
-doc = Doc("Mi vidas la grandajn hundojn kaj H2O.")
+doc = nlp("Mi vidas la grandajn hundojn kaj H2O.")
 for token in doc:
     print(token.text, token.lemma_, token.pos_, token.is_stop)
 ```
@@ -53,7 +53,7 @@ H2O h2o X False
 
 Cada `Token` tiene `text`, `idx` (posición en el texto), `lemma_`, `pos_` (etiqueta de Universal Dependencies),
 `is_stop`, `is_alpha`, `is_digit` e `is_punct`. Un `Doc` se recorre con `for`, admite `len()` y `doc[i]`.
-
+También se puede crear un `Doc` directamente con `from ciencianlp.doc import Doc`.
 La referencia completa de la API está en https://ciencianlp.readthedocs.io/es/latest/.
 
 ## Cómo funciona la librería
