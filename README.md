@@ -127,7 +127,6 @@ GitHub Actions los ejecuta en cada `push` y `pull request`.
 
 - Daniela González — [@danielaagonzalezz](https://github.com/danielaagonzalezz)
 - Olivia — [@Olivia029](https://github.com/Olivia029)
-- *(tercer miembro)*
 
 Cada uno trabaja en su propia rama y entra en `main` con un pull request.
 
