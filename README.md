@@ -11,7 +11,8 @@ El repositorio tiene tres partes:
 1. **Dataset:** párrafos de la Wikipedia en esperanto, etiquetados por temática.
 2. **Librería `ciencianlp`:** NLP para esperanto basado en reglas, construida desde cero (sin spaCy, NLTK ni Stanza),
    con una API parecida a la de spaCy.
-3. **Cuaderno de Colab:** entrena y evalúa un clasificador y lo prueba con una página web real. *(en desarrollo)*
+3. **Cuaderno de Colab** ([`notebooks/clasificacion_esperanto.ipynb`](notebooks/clasificacion_esperanto.ipynb)):
+   entrena y evalúa un clasificador y lo prueba con páginas web reales.
 
 ## Estado
 
@@ -22,7 +23,7 @@ El repositorio tiene tres partes:
 | Librería: tokenizador, `Token`/`Doc`, stop-words, etiquetador POS, lematizador | Hecho |
 | Librería: objeto `nlp` y exportación en `__init__.py` | Hecho |
 | Documentación en Read the Docs | Montada, se completa con la librería |
-| Cuaderno de clasificación (fase 3) | Pendiente |
+| Cuaderno de clasificación (fase 3) | Hecho |
 
 ## Instalación
 
@@ -33,7 +34,7 @@ pip install git+https://github.com/danielaagonzalezz/cienciaNLP.git
 ## Uso
 
 ```python
-from ciencianlp.doc import nlp
+from ciencianlp import nlp
 
 doc = nlp("Mi vidas la grandajn hundojn kaj H2O.")
 for token in doc:
@@ -98,9 +99,36 @@ python scripts/build_dataset.py
 python scripts/clean_dataset.py
 ```
 
-**Ruido conocido.** Cada párrafo hereda la etiqueta del artículo del que sale, y no todos hablan del tema. Por ejemplo,
-hay un párrafo sobre barreras acústicas en `fiziko`. Los textos que aparecían en dos clases se eliminaron, 40 filas. La
-medición del ruido se hará en el cuaderno.
+### Ruido en las etiquetas
+
+Cada párrafo hereda la etiqueta del artículo del que sale, pero no todos hablan del tema. Por ejemplo, hay un párrafo
+sobre barreras acústicas en `fiziko`, uno sobre un vestido en `biologio` y una biografía en `kemio`. Los textos que
+aparecían en dos clases ya se eliminaron al limpiar el dataset (40 filas).
+
+**Cómo lo medimos.** Con el script [`scripts/medir_ruido.py`](scripts/medir_ruido.py), de forma sencilla:
+
+1. Cada párrafo se pasa por `ciencianlp` y nos quedamos con sus lemas (igual que en el cuaderno).
+2. Con **validación cruzada de 5 partes**, cada párrafo lo clasifica un modelo (TF-IDF + regresión logística) que
+   **no lo ha visto** al entrenar.
+3. Si el modelo predice **otra clase** distinta de la etiqueta, el párrafo es **posible ruido**.
+
+```
+python scripts/medir_ruido.py
+```
+
+**Resultados:**
+
+| Clase | Posible ruido |
+|---|---|
+| `biologio` | 12.3 % |
+| `fiziko` | 27.5 % |
+| `kemio` | 26.3 % |
+| **total** | **21.8 %** (245 de 1123 párrafos) |
+
+Es una **cota superior**: incluye los párrafos mal etiquetados, pero también los fallos normales del modelo. Aun así,
+al leer los ejemplos que muestra el script, la mayoría son ruido de verdad: unas Olimpiadas de estudiantes en `fiziko`,
+un párrafo de psicología en `kemio`, otro sobre caminar sobre brasas también en `kemio`... Física y química tienen más ruido
+que biología porque sus artículos incluyen más biografías, historia y temas de frontera entre ellas (química física).
 
 ## Estructura del repositorio
 
@@ -108,8 +136,9 @@ medición del ruido se hará en el cuaderno.
 cienciaNLP/
 ├── src/ciencianlp/     # la librería
 ├── tests/              # tests con pytest
-├── scripts/            # build_dataset.py y clean_dataset.py
+├── scripts/            # build_dataset.py, clean_dataset.py y medir_ruido.py
 ├── dataset/            # dataset.csv
+├── notebooks/          # cuaderno de clasificación (fase 3)
 ├── docs/               # documentación (MkDocs)
 └── .github/workflows/  # tests automáticos en cada push
 ```
