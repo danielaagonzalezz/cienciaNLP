@@ -1,5 +1,7 @@
 """Crea dataset/dataset.csv (text;class) con párrafos de la Wikipedia en esperanto.
 
+También guarda dataset/origen.csv (text;class;article): de qué artículo sale cada párrafo.
+
 Requiere: pip install git+https://github.com/jparisu/nlp-esperantilo.git
 """
 
@@ -42,7 +44,7 @@ def miembros(categoria):
 
 
 def parrafos_de(titulo):
-    """Párrafos largos de un artículo (lista vacía si no existe o la red falla)."""
+    """Párrafos largos de un artículo, como pares (título, párrafo). Lista vacía si no existe o la red falla."""
     for intento in range(1, 4):
         try:
             pagina = WikiPage.look_up(titulo, language="eo", fallback_languages=(), any_language=False)
@@ -54,13 +56,13 @@ def parrafos_de(titulo):
             time.sleep(20 * intento)
             continue
         time.sleep(PAUSA)
-        return [p.replace(";", ",") for texto in pagina.sections.values() for p in texto.split("\n")
+        return [(titulo, p.replace(";", ",")) for texto in pagina.sections.values() for p in texto.split("\n")
                 if len(p.split()) >= MIN_PALABRAS and not p.startswith("=")][:MAX_POR_ARTICULO]
     return []
 
 
 def descargar(categoria):
-    """Párrafos de una categoría, con los mismos artículos y orden que descargándolos de uno en uno."""
+    """Pares (artículo, párrafo) de una categoría, con los mismos artículos y orden que descargándolos de uno en uno."""
     articulos, subcategorias = miembros(categoria)
     articulos += [a for sub in subcategorias[:MAX_SUBCATEGORIAS] for a in miembros(sub)[0]]
     articulos = sorted(set(articulos))
@@ -80,14 +82,18 @@ for clase, categoria in CLASES.items():
     parcial = Path(f"dataset/parcial_{clase}.csv")  # copia de seguridad: si ya existe, se reutiliza
     if not parcial.exists():
         with open(parcial, "w", encoding="utf-8", newline="") as f:
-            csv.writer(f, delimiter=";").writerows([(p,) for p in descargar(categoria)])
+            csv.writer(f, delimiter=";").writerows([(p, articulo) for articulo, p in descargar(categoria)])
     with open(parcial, encoding="utf-8") as f:
-        filas += [(fila[0], clase) for fila in csv.reader(f, delimiter=";")]
-    print(clase, sum(c == clase for _, c in filas), "párrafos")
+        filas += [(fila[0], clase, fila[1]) for fila in csv.reader(f, delimiter=";")]
+    print(clase, sum(c == clase for _, c, _ in filas), "párrafos")
 
 with open("dataset/dataset.csv", "w", encoding="utf-8", newline="") as f:
     escritor = csv.writer(f, delimiter=";")
     escritor.writerow(["text", "class"])
+    escritor.writerows([(texto, clase) for texto, clase, _ in filas])
+with open("dataset/origen.csv", "w", encoding="utf-8", newline="") as f:  # de qué artículo sale cada párrafo
+    escritor = csv.writer(f, delimiter=";", lineterminator="\n")
+    escritor.writerow(["text", "class", "article"])
     escritor.writerows(filas)
 for clase in CLASES:
     Path(f"dataset/parcial_{clase}.csv").unlink()  # ya no hacen falta
