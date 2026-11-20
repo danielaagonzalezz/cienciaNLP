@@ -60,6 +60,7 @@ def _construir_tabla() -> dict:
     tabla = {"la": "DET"}
 
     def anadir(palabras, etiqueta, terminaciones=("",)):
+        """Añade a la tabla cada palabra con cada terminación, todas con la misma etiqueta."""
         for palabra in palabras:
             for fin in terminaciones:
                 tabla[palabra + fin] = etiqueta

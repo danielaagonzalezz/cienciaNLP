@@ -19,14 +19,17 @@ class Token:
 
     @property  # se usa sin paréntesis: token.is_alpha
     def is_alpha(self):
+        """``True`` si el token está formado solo por letras."""
         return self.text.isalpha()
 
     @property
     def is_digit(self):
+        """``True`` si el token está formado solo por dígitos."""
         return self.text.isdigit()
 
     @property
     def is_punct(self):
+        """``True`` si el token es un signo de puntuación (no tiene letras ni números)."""
         # puntuación = no tiene ninguna letra ni número
         return not any(c.isalnum() for c in self.text)
 
