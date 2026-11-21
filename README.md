@@ -22,7 +22,7 @@ El repositorio tiene tres partes:
 | Script del dataset y dataset | Hecho |
 | Librería: tokenizador, `Token`/`Doc`, stop-words, etiquetador POS, lematizador | Hecho |
 | Librería: objeto `nlp` y exportación en `__init__.py` | Hecho |
-| Documentación en Read the Docs | Montada, se completa con la librería |
+| Documentación en Read the Docs | Hecho |
 | Cuaderno de clasificación (fase 3) | Hecho |
 
 ## Instalación
@@ -65,7 +65,7 @@ El esperanto es muy regular, así que la mayoría de las reglas salen de su gram
 |---|---|
 | `tokenizer.py` | Divide el texto en palabras y signos. Mantiene juntas las letras ĉ, ĝ, ĥ, ĵ, ŝ, ŭ y las fórmulas como `H2O`. |
 | `stopwords.py` | Genera las palabras vacías (artículo, pronombres, preposiciones, correlativos...) a partir de la gramática. |
-| `pos.py` | Etiqueta cada palabra: primero las de clase cerrada y luego, por la terminación, `-o` sustantivo, `-a` adjetivo, `-e` adverbio, `-as/-is/-os/-us/-u/-i` verbo. |
+| `pos.py` | Etiqueta cada palabra: primero las de clase cerrada y luego, por la terminación, `-o` sustantivo, `-a` adjetivo, `-e` adverbio, `-as/-is/-os/-us/-u/-i` verbo. Los ordinales con cifras (`1987-a`, `20-an`) son adjetivos, como en Universal Dependencies. |
 | `lemma.py` | Devuelve la forma base: quita el plural `-j`, el acusativo `-n` y la terminación del verbo (`hundojn` → `hundo`, `iras` → `iri`). |
 | `doc.py` | Las clases `Token` y `Doc`, que unen todo lo anterior. |
 
@@ -119,13 +119,13 @@ python scripts/medir_ruido.py
 
 | Clase | Posible ruido |
 |---|---|
-| `biologio` | 16.1 % |
-| `fiziko` | 23.9 % |
-| `kemio` | 28.5 % |
-| **total** | **22.8 %** (250 de 1098 párrafos) |
+| `biologio` | 15.9 % |
+| `fiziko` | 24.2 % |
+| `kemio` | 28.2 % |
+| **total** | **22.7 %** (249 de 1098 párrafos) |
 
 Es una **cota superior**: incluye los párrafos mal etiquetados, pero también los fallos normales del modelo. Aun así, al leer los ejemplos que muestra el script, varios son ruido de verdad: un párrafo sobre utensilios de cocina en
-`fiziko`, uno sobre fe y teología en `biologio`, uno de medicina en `kemio`... Otros son temas de frontera entre disciplinas (la resonancia magnética nuclear en `biologio`, la rutina, un glucósido de las plantas, en `kemio`). Física y química tienen más
+`fiziko`, uno sobre fe y teología en `biologio`, la biografía de un inventor en `kemio`... Otros son temas de frontera entre disciplinas (la habitabilidad de los planetas en `biologio`, la rutina, un glucósido de las plantas, en `kemio`). Física y química tienen más
 ruido que biología porque sus artículos incluyen más temas de frontera entre ellas (química física).
 
 ## Estructura del repositorio

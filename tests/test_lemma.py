@@ -51,6 +51,10 @@ def test_puntuacion_numeros_y_desconocidos():
     assert lematizar("DNA") == "dna"
 
 
+def test_ordinales_con_cifras():
+    assert lematizar("20-an") == lematizar("20-a") == "20-a"
+
+
 def test_los_lemas_coinciden_entre_formas():
     assert lematizar("hundoj") == lematizar("hundon") == lematizar("hundo")
 
