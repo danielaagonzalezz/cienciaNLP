@@ -78,18 +78,19 @@ Está en [`dataset/dataset.csv`](dataset/dataset.csv): `UTF-8`, separador `;`, c
 
 | Clase | Categoría de Wikipedia | Párrafos |
 |---|---|---|
-| `fiziko` (física) | `Kategorio:Fiziko` | 375 |
-| `biologio` (biología) | `Kategorio:Biologio` | 391 |
-| `kemio` (química) | `Kategorio:Kemio` | 357 |
+| `fiziko` (física) | `Kategorio:Fiziko` | 368 |
+| `biologio` (biología) | `Kategorio:Biologio` | 372 |
+| `kemio` (química) | `Kategorio:Kemio` | 358 |
 
 Cómo se construyó:
 
 1. [`scripts/build_dataset.py`](scripts/build_dataset.py) recorre cada categoría y sus subcategorías, lee los artículos con
    `WikiPage.look_up` (de la biblioteca [esperantilo](https://github.com/jparisu/nlp-esperantilo)) y se queda con los
-   párrafos de al menos 30 palabras, con un máximo de 5 por artículo. Espera entre peticiones, reintenta si falla la red
-   y guarda una copia de cada clase por si se interrumpe.
-2. [`scripts/clean_dataset.py`](scripts/clean_dataset.py) quita los párrafos repetidos, los que aparecen en dos clases a
-   la vez, y los que conservan restos de fórmulas LaTeX, enlaces o referencias.
+   párrafos de al menos 30 palabras, con un máximo de 5 por artículo. Espera entre peticiones, reintenta si falla la red y guarda una copia de cada clase por si se interrumpe. Además escribe `dataset/origen.csv` (no se sube al repositorio), con el artículo de Wikipedia del que sale cada párrafo.
+2. [`scripts/clean_dataset.py`](scripts/clean_dataset.py) quita los párrafos repetidos, los que aparecen en dos clases a la vez, los que conservan restos de fórmulas LaTeX, enlaces o referencias, y las **referencias bibliográficas** que se cuelan de las secciones *Referencoj* y *Eksteraj ligiloj* (citas del tipo «Kareiva, Peter (1989). "Renewing the Dialogue..."», con ISBN, `et al.`, `pp.`, listas de autores o las marcas «Arkivigite je ... per la retarkivo Wayback Machine» y «Arkivita el la originalo» de los enlaces archivados; eran 21 filas, casi todas en inglés). Con `origen.csv` escribe
+   [`dataset/articulos_usados.md`](dataset/articulos_usados.md): los artículos exactos de Wikipedia, con enlace, de los que sale el dataset final.
+
+Los artículos salen de la categoría de partida de cada clase y de sus 10 primeras subcategorías (sin las de `Ĝermoj`, que son esbozos). Se barajan con la semilla 42 y se descargan hasta reunir 400 párrafos por clase. `kemio` se queda en 380 antes de limpiar porque se agotan sus artículos.
 
 Para regenerarlo (tarda unos 45 minutos por los tiempos de espera con Wikipedia):
 
@@ -101,9 +102,7 @@ python scripts/clean_dataset.py
 
 ### Ruido en las etiquetas
 
-Cada párrafo hereda la etiqueta del artículo del que sale, pero no todos hablan del tema. Por ejemplo, hay un párrafo
-sobre barreras acústicas en `fiziko`, uno sobre un vestido en `biologio` y una biografía en `kemio`. Los textos que
-aparecían en dos clases ya se eliminaron al limpiar el dataset (40 filas).
+Cada párrafo hereda la etiqueta del artículo del que sale, pero no todos hablan del tema. Por ejemplo, hay un párrafo sobre utensilios de cocina en `fiziko`, uno sobre una sociedad científica y su política pública en `biologio` y uno sobre medicina en `kemio`. Los textos que aparecían en dos clases ya se eliminaron al limpiar el dataset (56 filas).
 
 **Cómo lo medimos.** Con el script [`scripts/medir_ruido.py`](scripts/medir_ruido.py), de forma sencilla:
 
@@ -120,15 +119,14 @@ python scripts/medir_ruido.py
 
 | Clase | Posible ruido |
 |---|---|
-| `biologio` | 12.3 % |
-| `fiziko` | 27.5 % |
-| `kemio` | 26.3 % |
-| **total** | **21.8 %** (245 de 1123 párrafos) |
+| `biologio` | 16.1 % |
+| `fiziko` | 23.9 % |
+| `kemio` | 28.5 % |
+| **total** | **22.8 %** (250 de 1098 párrafos) |
 
-Es una **cota superior**: incluye los párrafos mal etiquetados, pero también los fallos normales del modelo. Aun así,
-al leer los ejemplos que muestra el script, la mayoría son ruido de verdad: unas Olimpiadas de estudiantes en `fiziko`,
-un párrafo de psicología en `kemio`, otro sobre caminar sobre brasas también en `kemio`... Física y química tienen más ruido
-que biología porque sus artículos incluyen más biografías, historia y temas de frontera entre ellas (química física).
+Es una **cota superior**: incluye los párrafos mal etiquetados, pero también los fallos normales del modelo. Aun así, al leer los ejemplos que muestra el script, varios son ruido de verdad: un párrafo sobre utensilios de cocina en
+`fiziko`, uno sobre fe y teología en `biologio`, uno de medicina en `kemio`... Otros son temas de frontera entre disciplinas (la resonancia magnética nuclear en `biologio`, la rutina, un glucósido de las plantas, en `kemio`). Física y química tienen más
+ruido que biología porque sus artículos incluyen más temas de frontera entre ellas (química física).
 
 ## Estructura del repositorio
 
@@ -137,7 +135,7 @@ cienciaNLP/
 ├── src/ciencianlp/     # la librería
 ├── tests/              # tests con pytest
 ├── scripts/            # build_dataset.py, clean_dataset.py y medir_ruido.py
-├── dataset/            # dataset.csv
+├── dataset/            # dataset.csv y articulos_usados.md
 ├── notebooks/          # cuaderno de clasificación (fase 3)
 ├── docs/               # documentación (MkDocs)
 └── .github/workflows/  # tests automáticos en cada push

@@ -1,0 +1,415 @@
+# Artículos de los que sale el dataset
+
+Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos un párrafo a `dataset/dataset.csv` (ya limpio). La genera `scripts/clean_dataset.py` a partir de `dataset/origen.csv`, que escribe `scripts/build_dataset.py`.
+
+## fiziko: 123 artículos, 368 párrafos
+
+- [Aerodinamiko](https://eo.wikipedia.org/wiki/Aerodinamiko): 1
+- [Aeroĝelo](https://eo.wikipedia.org/wiki/Aero%C4%9Delo): 4
+- [Akcelo](https://eo.wikipedia.org/wiki/Akcelo): 5
+- [Aksodistanco](https://eo.wikipedia.org/wiki/Aksodistanco): 1
+- [Akustiko](https://eo.wikipedia.org/wiki/Akustiko): 3
+- [Ampermetro](https://eo.wikipedia.org/wiki/Ampermetro): 2
+- [Angula rapido](https://eo.wikipedia.org/wiki/Angula_rapido): 5
+- [Astroĥemio](https://eo.wikipedia.org/wiki/Astro%C4%A5emio): 1
+- [Atomkerno](https://eo.wikipedia.org/wiki/Atomkerno): 1
+- [Barometro](https://eo.wikipedia.org/wiki/Barometro): 5
+- [Braksvingado](https://eo.wikipedia.org/wiki/Braksvingado): 2
+- [Bruŝirmilo](https://eo.wikipedia.org/wiki/Bru%C5%9Dirmilo): 2
+- [Centrifuga forto](https://eo.wikipedia.org/wiki/Centrifuga_forto): 3
+- [Centripeta forto](https://eo.wikipedia.org/wiki/Centripeta_forto): 2
+- [Dajsonstrukturo](https://eo.wikipedia.org/wiki/Dajsonstrukturo): 2
+- [Dilatkoeficiento](https://eo.wikipedia.org/wiki/Dilatkoeficiento): 5
+- [Dinamo](https://eo.wikipedia.org/wiki/Dinamo): 2
+- [Duonkonduktanto](https://eo.wikipedia.org/wiki/Duonkonduktanto): 5
+- [Dureco](https://eo.wikipedia.org/wiki/Dureco): 5
+- [Ekvilibro](https://eo.wikipedia.org/wiki/Ekvilibro): 1
+- [Elasteco (meĥaniko)](https://eo.wikipedia.org/wiki/Elasteco_%28me%C4%A5aniko%29): 5
+- [Elektra cirkvito](https://eo.wikipedia.org/wiki/Elektra_cirkvito): 1
+- [Elektra kampo](https://eo.wikipedia.org/wiki/Elektra_kampo): 5
+- [Elektra konduktivo](https://eo.wikipedia.org/wiki/Elektra_konduktivo): 5
+- [Elektra kurento](https://eo.wikipedia.org/wiki/Elektra_kurento): 5
+- [Elektra lumo](https://eo.wikipedia.org/wiki/Elektra_lumo): 1
+- [Elektroforo](https://eo.wikipedia.org/wiki/Elektroforo): 5
+- [Elektromezurilo](https://eo.wikipedia.org/wiki/Elektromezurilo): 3
+- [Elektromotoro](https://eo.wikipedia.org/wiki/Elektromotoro): 1
+- [Elektrostatika malŝargo](https://eo.wikipedia.org/wiki/Elektrostatika_mal%C5%9Dargo): 2
+- [Elektrostatiko](https://eo.wikipedia.org/wiki/Elektrostatiko): 3
+- [Elektrotekniko](https://eo.wikipedia.org/wiki/Elektrotekniko): 1
+- [Energia miksaĵo](https://eo.wikipedia.org/wiki/Energia_miksa%C4%B5o): 1
+- [Eskom](https://eo.wikipedia.org/wiki/Eskom): 2
+- [Eŭroŝtopilo](https://eo.wikipedia.org/wiki/E%C5%ADro%C5%9Dtopilo): 3
+- [Filozofio de fiziko](https://eo.wikipedia.org/wiki/Filozofio_de_fiziko): 4
+- [Fiziko (Aristotelo)](https://eo.wikipedia.org/wiki/Fiziko_%28Aristotelo%29): 5
+- [Flugilŝarĝo](https://eo.wikipedia.org/wiki/Flugil%C5%9Dar%C4%9Do): 1
+- [Fonono](https://eo.wikipedia.org/wiki/Fonono): 2
+- [Frekvenco](https://eo.wikipedia.org/wiki/Frekvenco): 5
+- [Fulmoŝirmilo](https://eo.wikipedia.org/wiki/Fulmo%C5%9Dirmilo): 1
+- [Fundamenta forto](https://eo.wikipedia.org/wiki/Fundamenta_forto): 5
+- [Gas-ŝargiga lampo](https://eo.wikipedia.org/wiki/Gas-%C5%9Dargiga_lampo): 2
+- [Gorĝa kantado](https://eo.wikipedia.org/wiki/Gor%C4%9Da_kantado): 2
+- [Grajo](https://eo.wikipedia.org/wiki/Grajo): 4
+- [Grando](https://eo.wikipedia.org/wiki/Grando): 2
+- [Gravita akcelo](https://eo.wikipedia.org/wiki/Gravita_akcelo): 4
+- [Gravita singulareco](https://eo.wikipedia.org/wiki/Gravita_singulareco): 3
+- [Gravito](https://eo.wikipedia.org/wiki/Gravito): 5
+- [Harmono](https://eo.wikipedia.org/wiki/Harmono): 4
+- [Harsekigilo](https://eo.wikipedia.org/wiki/Harsekigilo): 1
+- [Hipoksio (media)](https://eo.wikipedia.org/wiki/Hipoksio_%28media%29): 1
+- [Holografio](https://eo.wikipedia.org/wiki/Holografio): 5
+- [Homogeneco kaj heterogeneco](https://eo.wikipedia.org/wiki/Homogeneco_kaj_heterogeneco): 2
+- [Indukta kuirplato](https://eo.wikipedia.org/wiki/Indukta_kuirplato): 4
+- [Indukta rezisto](https://eo.wikipedia.org/wiki/Indukta_rezisto): 1
+- [Inercia forto](https://eo.wikipedia.org/wiki/Inercia_forto): 2
+- [Inercio](https://eo.wikipedia.org/wiki/Inercio): 3
+- [Instrumentotekniko](https://eo.wikipedia.org/wiki/Instrumentotekniko): 1
+- [Intenseco (fiziko)](https://eo.wikipedia.org/wiki/Intenseco_%28fiziko%29): 1
+- [Izolilo](https://eo.wikipedia.org/wiki/Izolilo): 1
+- [Izotaĥoforezo](https://eo.wikipedia.org/wiki/Izota%C4%A5oforezo): 3
+- [John Huang](https://eo.wikipedia.org/wiki/John_Huang): 5
+- [Kapacitanco](https://eo.wikipedia.org/wiki/Kapacitanco): 1
+- [Kavitacio](https://eo.wikipedia.org/wiki/Kavitacio): 4
+- [Kinetiko (fiziko)](https://eo.wikipedia.org/wiki/Kinetiko_%28fiziko%29): 1
+- [Klasika mekaniko](https://eo.wikipedia.org/wiki/Klasika_mekaniko): 5
+- [Konvekto](https://eo.wikipedia.org/wiki/Konvekto): 5
+- [Koriolisforto](https://eo.wikipedia.org/wiki/Koriolisforto): 5
+- [Kosma radiado](https://eo.wikipedia.org/wiki/Kosma_radiado): 3
+- [Kristala strukturo](https://eo.wikipedia.org/wiki/Kristala_strukturo): 5
+- [Kurta cirkvito](https://eo.wikipedia.org/wiki/Kurta_cirkvito): 4
+- [Kvantuma mekaniko](https://eo.wikipedia.org/wiki/Kvantuma_mekaniko): 5
+- [Kvantumo](https://eo.wikipedia.org/wiki/Kvantumo): 3
+- [Leon N. Cooper](https://eo.wikipedia.org/wiki/Leon_N._Cooper): 1
+- [Leĝoj de Kepler](https://eo.wikipedia.org/wiki/Le%C4%9Doj_de_Kepler): 5
+- [Lineareco](https://eo.wikipedia.org/wiki/Lineareco): 5
+- [Lopa kvantuma gravito](https://eo.wikipedia.org/wiki/Lopa_kvantuma_gravito): 2
+- [Lum-eliganta diodo](https://eo.wikipedia.org/wiki/Lum-eliganta_diodo): 2
+- [Majorana fermiono](https://eo.wikipedia.org/wiki/Majorana_fermiono): 2
+- [Masocentro](https://eo.wikipedia.org/wiki/Masocentro): 5
+- [Masopunkto](https://eo.wikipedia.org/wiki/Masopunkto): 2
+- [Matematika pendolo](https://eo.wikipedia.org/wiki/Matematika_pendolo): 5
+- [Materikvanto](https://eo.wikipedia.org/wiki/Materikvanto): 3
+- [Materio](https://eo.wikipedia.org/wiki/Materio): 5
+- [Megafono](https://eo.wikipedia.org/wiki/Megafono): 1
+- [Meĥanika ekvilibro](https://eo.wikipedia.org/wiki/Me%C4%A5anika_ekvilibro): 5
+- [Meĥaniko](https://eo.wikipedia.org/wiki/Me%C4%A5aniko): 5
+- [Modelo de Ising](https://eo.wikipedia.org/wiki/Modelo_de_Ising): 5
+- [Naturtonserio](https://eo.wikipedia.org/wiki/Naturtonserio): 5
+- [Nigra nano](https://eo.wikipedia.org/wiki/Nigra_nano): 1
+- [Osmozo](https://eo.wikipedia.org/wiki/Osmozo): 2
+- [Paledkriko](https://eo.wikipedia.org/wiki/Paledkriko): 1
+- [Parta premo](https://eo.wikipedia.org/wiki/Parta_premo): 1
+- [Peza akvo](https://eo.wikipedia.org/wiki/Peza_akvo): 1
+- [Piezoelektro](https://eo.wikipedia.org/wiki/Piezoelektro): 5
+- [Poliklorizita bifenilo](https://eo.wikipedia.org/wiki/Poliklorizita_bifenilo): 5
+- [Pozicio](https://eo.wikipedia.org/wiki/Pozicio): 4
+- [Principo de ekskludo](https://eo.wikipedia.org/wiki/Principo_de_ekskludo): 1
+- [Radikpremo](https://eo.wikipedia.org/wiki/Radikpremo): 2
+- [Reduktismo](https://eo.wikipedia.org/wiki/Reduktismo): 5
+- [Relajso](https://eo.wikipedia.org/wiki/Relajso): 5
+- [SDDS](https://eo.wikipedia.org/wiki/SDDS): 5
+- [Salter-anaso](https://eo.wikipedia.org/wiki/Salter-anaso): 1
+- [Siblo](https://eo.wikipedia.org/wiki/Siblo): 3
+- [Simetrio](https://eo.wikipedia.org/wiki/Simetrio): 5
+- [Simetrio (fiziko)](https://eo.wikipedia.org/wiki/Simetrio_%28fiziko%29): 3
+- [Sojlo](https://eo.wikipedia.org/wiki/Sojlo): 4
+- [Sonaro](https://eo.wikipedia.org/wiki/Sonaro): 5
+- [Spaco de Minkowski](https://eo.wikipedia.org/wiki/Spaco_de_Minkowski): 1
+- [Statistika meĥaniko](https://eo.wikipedia.org/wiki/Statistika_me%C4%A5aniko): 4
+- [Striko de La Kanada](https://eo.wikipedia.org/wiki/Striko_de_La_Kanada): 2
+- [Struktura biologio](https://eo.wikipedia.org/wiki/Struktura_biologio): 1
+- [Suna fiziko](https://eo.wikipedia.org/wiki/Suna_fiziko): 2
+- [Supersolido](https://eo.wikipedia.org/wiki/Supersolido): 2
+- [Telefonio](https://eo.wikipedia.org/wiki/Telefonio): 3
+- [Teoremo de Bell](https://eo.wikipedia.org/wiki/Teoremo_de_Bell): 4
+- [Teoria fiziko](https://eo.wikipedia.org/wiki/Teoria_fiziko): 5
+- [Tesla transformatoro](https://eo.wikipedia.org/wiki/Tesla_transformatoro): 1
+- [Troleo](https://eo.wikipedia.org/wiki/Troleo): 2
+- [Vektopesilo](https://eo.wikipedia.org/wiki/Vektopesilo): 1
+- [Vibrado](https://eo.wikipedia.org/wiki/Vibrado): 1
+- [Voĉkordoj](https://eo.wikipedia.org/wiki/Vo%C4%89kordoj): 2
+
+## biologio: 151 artículos, 372 párrafos
+
+- [Akselo](https://eo.wikipedia.org/wiki/Akselo): 2
+- [Algoscienco](https://eo.wikipedia.org/wiki/Algoscienco): 2
+- [Anatomia Nomenklaturo](https://eo.wikipedia.org/wiki/Anatomia_Nomenklaturo): 3
+- [Anatomio](https://eo.wikipedia.org/wiki/Anatomio): 5
+- [Angiografio](https://eo.wikipedia.org/wiki/Angiografio): 1
+- [Animal Diversity Web](https://eo.wikipedia.org/wiki/Animal_Diversity_Web): 3
+- [Antisepso](https://eo.wikipedia.org/wiki/Antisepso): 3
+- [Antropa principo](https://eo.wikipedia.org/wiki/Antropa_principo): 5
+- [Arecibo-mesaĝo](https://eo.wikipedia.org/wiki/Arecibo-mesa%C4%9Do): 5
+- [Artropodkapa problemo](https://eo.wikipedia.org/wiki/Artropodkapa_problemo): 2
+- [Astrobiologio](https://eo.wikipedia.org/wiki/Astrobiologio): 2
+- [Atavismo](https://eo.wikipedia.org/wiki/Atavismo): 2
+- [Aĥila tendeno](https://eo.wikipedia.org/wiki/A%C4%A5ila_tendeno): 2
+- [BODIES... The Exhibition](https://eo.wikipedia.org/wiki/BODIES..._The_Exhibition): 1
+- [Beagle 2](https://eo.wikipedia.org/wiki/Beagle_2): 3
+- [Bigamio](https://eo.wikipedia.org/wiki/Bigamio): 1
+- [Biodiverseco-riĉaĵejo](https://eo.wikipedia.org/wiki/Biodiverseco-ri%C4%89a%C4%B5ejo): 5
+- [Biologia armilo](https://eo.wikipedia.org/wiki/Biologia_armilo): 5
+- [Biologia patento](https://eo.wikipedia.org/wiki/Biologia_patento): 1
+- [Biologia specimeno](https://eo.wikipedia.org/wiki/Biologia_specimeno): 1
+- [Biomaso (ekologio)](https://eo.wikipedia.org/wiki/Biomaso_%28ekologio%29): 2
+- [Biomeĥaniko](https://eo.wikipedia.org/wiki/Biome%C4%A5aniko): 2
+- [Bisino](https://eo.wikipedia.org/wiki/Bisino): 1
+- [Boko](https://eo.wikipedia.org/wiki/Boko): 2
+- [Bonfarto (biologio)](https://eo.wikipedia.org/wiki/Bonfarto_%28biologio%29): 5
+- [Breakthrough Listen](https://eo.wikipedia.org/wiki/Breakthrough_Listen): 5
+- [Bredfosto](https://eo.wikipedia.org/wiki/Bredfosto): 4
+- [Centra nerva sistemo](https://eo.wikipedia.org/wiki/Centra_nerva_sistemo): 5
+- [Daktileco](https://eo.wikipedia.org/wiki/Daktileco): 2
+- [Dentalveolo](https://eo.wikipedia.org/wiki/Dentalveolo): 3
+- [Dingo](https://eo.wikipedia.org/wiki/Dingo): 1
+- [Dissekco](https://eo.wikipedia.org/wiki/Dissekco): 1
+- [Diverseco de la ekosistemoj](https://eo.wikipedia.org/wiki/Diverseco_de_la_ekosistemoj): 1
+- [Diĥotomio](https://eo.wikipedia.org/wiki/Di%C4%A5otomio): 2
+- [Dorsdekoltaĵo](https://eo.wikipedia.org/wiki/Dorsdekolta%C4%B5o): 2
+- [Ekologia restaŭro](https://eo.wikipedia.org/wiki/Ekologia_resta%C5%ADro): 5
+- [Ekoregionoj en Aŭstralio](https://eo.wikipedia.org/wiki/Ekoregionoj_en_A%C5%ADstralio): 2
+- [Elspiro](https://eo.wikipedia.org/wiki/Elspiro): 3
+- [Eltena kapacito](https://eo.wikipedia.org/wiki/Eltena_kapacito): 3
+- [Enkruciĝo](https://eo.wikipedia.org/wiki/Enkruci%C4%9Do): 3
+- [Enspiro](https://eo.wikipedia.org/wiki/Enspiro): 2
+- [Evolucio (teorio)](https://eo.wikipedia.org/wiki/Evolucio_%28teorio%29): 5
+- [Evoluo](https://eo.wikipedia.org/wiki/Evoluo): 5
+- [Flanka linio](https://eo.wikipedia.org/wiki/Flanka_linio): 1
+- [Flava makulo](https://eo.wikipedia.org/wiki/Flava_makulo): 1
+- [Formulo de Drake](https://eo.wikipedia.org/wiki/Formulo_de_Drake): 5
+- [GFAJ-1](https://eo.wikipedia.org/wiki/GFAJ-1): 2
+- [Ganglio](https://eo.wikipedia.org/wiki/Ganglio): 1
+- [Genetika diverseco](https://eo.wikipedia.org/wiki/Genetika_diverseco): 2
+- [Geobios](https://eo.wikipedia.org/wiki/Geobios): 2
+- [Global Biodiversity Information Facility](https://eo.wikipedia.org/wiki/Global_Biodiversity_Information_Facility): 4
+- [Glukoz-dependa insulinotropa peptido](https://eo.wikipedia.org/wiki/Glukoz-dependa_insulinotropa_peptido): 1
+- [Gravedeco (animaloj)](https://eo.wikipedia.org/wiki/Gravedeco_%28animaloj%29): 2
+- [Harblankismo](https://eo.wikipedia.org/wiki/Harblankismo): 1
+- [Hektokotilo](https://eo.wikipedia.org/wiki/Hektokotilo): 2
+- [Hibrido](https://eo.wikipedia.org/wiki/Hibrido): 2
+- [Homeostato](https://eo.wikipedia.org/wiki/Homeostato): 2
+- [Intermama fendo](https://eo.wikipedia.org/wiki/Intermama_fendo): 1
+- [Irisrekono](https://eo.wikipedia.org/wiki/Irisrekono): 5
+- [Jean Héroard](https://eo.wikipedia.org/wiki/Jean_H%C3%A9roard): 5
+- [John Hunter](https://eo.wikipedia.org/wiki/John_Hunter): 2
+- [Kadavrodonaco](https://eo.wikipedia.org/wiki/Kadavrodonaco): 3
+- [Kalao](https://eo.wikipedia.org/wiki/Kalao): 1
+- [Kamuflado](https://eo.wikipedia.org/wiki/Kamuflado): 2
+- [Kavokarapaca testudo](https://eo.wikipedia.org/wiki/Kavokarapaca_testudo): 1
+- [Klapo](https://eo.wikipedia.org/wiki/Klapo): 2
+- [Konvencio pri Biologiaj Armiloj](https://eo.wikipedia.org/wiki/Konvencio_pri_Biologiaj_Armiloj): 2
+- [Kruro](https://eo.wikipedia.org/wiki/Kruro): 1
+- [Langaj nervoj](https://eo.wikipedia.org/wiki/Langaj_nervoj): 1
+- [Leĝo de Biodiverseco de Kostariko](https://eo.wikipedia.org/wiki/Le%C4%9Do_de_Biodiverseco_de_Kostariko): 5
+- [Lokusto](https://eo.wikipedia.org/wiki/Lokusto): 1
+- [Longa osto](https://eo.wikipedia.org/wiki/Longa_osto): 1
+- [Lumsensilo](https://eo.wikipedia.org/wiki/Lumsensilo): 4
+- [Magnetosensivo](https://eo.wikipedia.org/wiki/Magnetosensivo): 5
+- [Marfundo](https://eo.wikipedia.org/wiki/Marfundo): 1
+- [Marokulturo](https://eo.wikipedia.org/wiki/Marokulturo): 1
+- [Masaĝo](https://eo.wikipedia.org/wiki/Masa%C4%9Do): 5
+- [Melanomo](https://eo.wikipedia.org/wiki/Melanomo): 1
+- [Metamorfozo (biologio)](https://eo.wikipedia.org/wiki/Metamorfozo_%28biologio%29): 2
+- [Mitulbredado](https://eo.wikipedia.org/wiki/Mitulbredado): 3
+- [Mjelaj piramidoj](https://eo.wikipedia.org/wiki/Mjelaj_piramidoj): 1
+- [Monda Konserveja Observa Centro](https://eo.wikipedia.org/wiki/Monda_Konserveja_Observa_Centro): 3
+- [Morto](https://eo.wikipedia.org/wiki/Morto): 5
+- [Nacia parko Noel Kempff Mercado](https://eo.wikipedia.org/wiki/Nacia_parko_Noel_Kempff_Mercado): 3
+- [Naturprotekto](https://eo.wikipedia.org/wiki/Naturprotekto): 1
+- [Naztruo](https://eo.wikipedia.org/wiki/Naztruo): 1
+- [Nuklea magneta resonanco](https://eo.wikipedia.org/wiki/Nuklea_magneta_resonanco): 2
+- [Orbito (anatomio)](https://eo.wikipedia.org/wiki/Orbito_%28anatomio%29): 1
+- [Ostologio](https://eo.wikipedia.org/wiki/Ostologio): 1
+- [Ostrobredado](https://eo.wikipedia.org/wiki/Ostrobredado): 5
+- [Pankreato](https://eo.wikipedia.org/wiki/Pankreato): 3
+- [Papilo](https://eo.wikipedia.org/wiki/Papilo): 1
+- [Papilo de Vater](https://eo.wikipedia.org/wiki/Papilo_de_Vater): 3
+- [Paraplegio](https://eo.wikipedia.org/wiki/Paraplegio): 4
+- [Parietosto](https://eo.wikipedia.org/wiki/Parietosto): 2
+- [Pariĝa ceremonio](https://eo.wikipedia.org/wiki/Pari%C4%9Da_ceremonio): 2
+- [Paul Charles William Davies](https://eo.wikipedia.org/wiki/Paul_Charles_William_Davies): 5
+- [Perdo de biodiverseco](https://eo.wikipedia.org/wiki/Perdo_de_biodiverseco): 5
+- [Perineo](https://eo.wikipedia.org/wiki/Perineo): 1
+- [Piedsigno](https://eo.wikipedia.org/wiki/Piedsigno): 3
+- [Planeda loĝebleco](https://eo.wikipedia.org/wiki/Planeda_lo%C4%9Debleco): 1
+- [Pleŭro](https://eo.wikipedia.org/wiki/Ple%C5%ADro): 2
+- [Poliandrio](https://eo.wikipedia.org/wiki/Poliandrio): 3
+- [Poliginio](https://eo.wikipedia.org/wiki/Poliginio): 2
+- [Populacibiologio](https://eo.wikipedia.org/wiki/Populacibiologio): 2
+- [Populaciekologio](https://eo.wikipedia.org/wiki/Populaciekologio): 3
+- [Principo de mezumoj](https://eo.wikipedia.org/wiki/Principo_de_mezumoj): 5
+- [Promiskueco](https://eo.wikipedia.org/wiki/Promiskueco): 3
+- [Rakio](https://eo.wikipedia.org/wiki/Rakio): 1
+- [Remburado (konservado de bestoj)](https://eo.wikipedia.org/wiki/Remburado_%28konservado_de_bestoj%29): 3
+- [Riĉiineoj](https://eo.wikipedia.org/wiki/Ri%C4%89iineoj): 1
+- [Robotiko biologia](https://eo.wikipedia.org/wiki/Robotiko_biologia): 3
+- [SETI@home](https://eo.wikipedia.org/wiki/SETI%40home): 2
+- [Saprofitismo](https://eo.wikipedia.org/wiki/Saprofitismo): 1
+- [Sekco (anatomio)](https://eo.wikipedia.org/wiki/Sekco_%28anatomio%29): 1
+- [Seksa duformismo](https://eo.wikipedia.org/wiki/Seksa_duformismo): 5
+- [Seksa maturiĝo](https://eo.wikipedia.org/wiki/Seksa_maturi%C4%9Do): 3
+- [Selekto](https://eo.wikipedia.org/wiki/Selekto): 1
+- [Sesfingreco](https://eo.wikipedia.org/wiki/Sesfingreco): 3
+- [Simfizo](https://eo.wikipedia.org/wiki/Simfizo): 1
+- [Sino](https://eo.wikipedia.org/wiki/Sino): 1
+- [Sinteza biologio](https://eo.wikipedia.org/wiki/Sinteza_biologio): 2
+- [Sinus pudoris](https://eo.wikipedia.org/wiki/Sinus_pudoris): 1
+- [Sinuso (biologio)](https://eo.wikipedia.org/wiki/Sinuso_%28biologio%29): 1
+- [Sirinkso (biologio)](https://eo.wikipedia.org/wiki/Sirinkso_%28biologio%29): 5
+- [Specikomplekso](https://eo.wikipedia.org/wiki/Specikomplekso): 4
+- [Speciprotektado](https://eo.wikipedia.org/wiki/Speciprotektado): 3
+- [Spermodukto](https://eo.wikipedia.org/wiki/Spermodukto): 1
+- [Spina nervo](https://eo.wikipedia.org/wiki/Spina_nervo): 5
+- [Stomaksuko](https://eo.wikipedia.org/wiki/Stomaksuko): 2
+- [Stumpo](https://eo.wikipedia.org/wiki/Stumpo): 1
+- [Supertarsa artiko](https://eo.wikipedia.org/wiki/Supertarsa_artiko): 2
+- [Suro (muskolo)](https://eo.wikipedia.org/wiki/Suro_%28muskolo%29): 2
+- [Teknosignaturo](https://eo.wikipedia.org/wiki/Teknosignaturo): 1
+- [Tempio](https://eo.wikipedia.org/wiki/Tempio): 5
+- [Tilapio](https://eo.wikipedia.org/wiki/Tilapio): 5
+- [Toraka diafragmo](https://eo.wikipedia.org/wiki/Toraka_diafragmo): 2
+- [Traŭmato (medicino)](https://eo.wikipedia.org/wiki/Tra%C5%ADmato_%28medicino%29): 2
+- [Tropika arbaro](https://eo.wikipedia.org/wiki/Tropika_arbaro): 2
+- [Turmentakaba Tutlanda Faŭnejo](https://eo.wikipedia.org/wiki/Turmentakaba_Tutlanda_Fa%C5%ADnejo): 1
+- [Usona Societo de Mamalogoj](https://eo.wikipedia.org/wiki/Usona_Societo_de_Mamalogoj): 4
+- [Vagino](https://eo.wikipedia.org/wiki/Vagino): 5
+- [Vago](https://eo.wikipedia.org/wiki/Vago): 1
+- [Vertebra korpo](https://eo.wikipedia.org/wiki/Vertebra_korpo): 1
+- [Verto](https://eo.wikipedia.org/wiki/Verto): 1
+- [Vivoprincipo](https://eo.wikipedia.org/wiki/Vivoprincipo): 1
+- [Zoologia specimeno](https://eo.wikipedia.org/wiki/Zoologia_specimeno): 2
+- [Ĝemela lingvo](https://eo.wikipedia.org/wiki/%C4%9Cemela_lingvo): 5
+- [Ĝibo](https://eo.wikipedia.org/wiki/%C4%9Cibo): 1
+- [Ĥondrocito](https://eo.wikipedia.org/wiki/%C4%A4ondrocito): 1
+- [Ĥordo (anatomio)](https://eo.wikipedia.org/wiki/%C4%A4ordo_%28anatomio%29): 1
+
+## kemio: 129 artículos, 358 párrafos
+
+- [Atmosfera ĥemio](https://eo.wikipedia.org/wiki/Atmosfera_%C4%A5emio): 2
+- [Atomomaso](https://eo.wikipedia.org/wiki/Atomomaso): 2
+- [Bendbreĉo](https://eo.wikipedia.org/wiki/Bendbre%C4%89o): 4
+- [Biogena kontraŭfrostaĵo](https://eo.wikipedia.org/wiki/Biogena_kontra%C5%ADfrosta%C4%B5o): 2
+- [Biomagnifiko](https://eo.wikipedia.org/wiki/Biomagnifiko): 2
+- [Bloko de la perioda tabelo](https://eo.wikipedia.org/wiki/Bloko_de_la_perioda_tabelo): 4
+- [Bromotimolbluo](https://eo.wikipedia.org/wiki/Bromotimolbluo): 5
+- [Brulilo de Bunsen](https://eo.wikipedia.org/wiki/Brulilo_de_Bunsen): 1
+- [Brulilo de Teclu](https://eo.wikipedia.org/wiki/Brulilo_de_Teclu): 1
+- [De re metallica](https://eo.wikipedia.org/wiki/De_re_metallica): 1
+- [Deklaroj pri Risko kaj Sekureco](https://eo.wikipedia.org/wiki/Deklaroj_pri_Risko_kaj_Sekureco): 2
+- [Detonacio](https://eo.wikipedia.org/wiki/Detonacio): 1
+- [Disocio](https://eo.wikipedia.org/wiki/Disocio): 1
+- [Disulfidponto](https://eo.wikipedia.org/wiki/Disulfidponto): 4
+- [Ekflama temperaturo](https://eo.wikipedia.org/wiki/Ekflama_temperaturo): 5
+- [Ekvacio de Arrhenius](https://eo.wikipedia.org/wiki/Ekvacio_de_Arrhenius): 4
+- [Elektrolizo](https://eo.wikipedia.org/wiki/Elektrolizo): 5
+- [Elektrona truo](https://eo.wikipedia.org/wiki/Elektrona_truo): 5
+- [Emulsio](https://eo.wikipedia.org/wiki/Emulsio): 3
+- [Eŭtekto](https://eo.wikipedia.org/wiki/E%C5%ADtekto): 3
+- [Fazo de materio](https://eo.wikipedia.org/wiki/Fazo_de_materio): 5
+- [Fenolftaleino](https://eo.wikipedia.org/wiki/Fenolftaleino): 1
+- [Fenolruĝo](https://eo.wikipedia.org/wiki/Fenolru%C4%9Do): 4
+- [Fluorita acido](https://eo.wikipedia.org/wiki/Fluorita_acido): 1
+- [Formulo kruda](https://eo.wikipedia.org/wiki/Formulo_kruda): 5
+- [Forto de Van-der-Waals](https://eo.wikipedia.org/wiki/Forto_de_Van-der-Waals): 3
+- [Frakcia kristaligo (kemio)](https://eo.wikipedia.org/wiki/Frakcia_kristaligo_%28kemio%29): 2
+- [Frostopunkto](https://eo.wikipedia.org/wiki/Frostopunkto): 1
+- [Georg Simon Klügel](https://eo.wikipedia.org/wiki/Georg_Simon_Kl%C3%BCgel): 4
+- [Grzegorz Grzeban](https://eo.wikipedia.org/wiki/Grzegorz_Grzeban): 1
+- [Hennig Brand](https://eo.wikipedia.org/wiki/Hennig_Brand): 4
+- [Hermann Fehling (kemiisto)](https://eo.wikipedia.org/wiki/Hermann_Fehling_%28kemiisto%29): 5
+- [Hipojodita acido](https://eo.wikipedia.org/wiki/Hipojodita_acido): 2
+- [Indico (notacio)](https://eo.wikipedia.org/wiki/Indico_%28notacio%29): 1
+- [Internacia Unio de Teoria kaj Aplika Ĥemio](https://eo.wikipedia.org/wiki/Internacia_Unio_de_Teoria_kaj_Aplika_%C4%A4emio): 2
+- [Johann Christian Poggendorff](https://eo.wikipedia.org/wiki/Johann_Christian_Poggendorff): 5
+- [Kemia serio](https://eo.wikipedia.org/wiki/Kemia_serio): 1
+- [Kemia specio](https://eo.wikipedia.org/wiki/Kemia_specio): 5
+- [Kemio](https://eo.wikipedia.org/wiki/Kemio): 5
+- [Kombinaĵoj de noblaj gasoj](https://eo.wikipedia.org/wiki/Kombina%C4%B5oj_de_noblaj_gasoj): 2
+- [Komputa ĥemio](https://eo.wikipedia.org/wiki/Komputa_%C4%A5emio): 4
+- [Koncentriteco](https://eo.wikipedia.org/wiki/Koncentriteco): 5
+- [Kristalakvo](https://eo.wikipedia.org/wiki/Kristalakvo): 1
+- [Kristalografio](https://eo.wikipedia.org/wiki/Kristalografio): 5
+- [Kristalsistemo](https://eo.wikipedia.org/wiki/Kristalsistemo): 1
+- [Kunpremita tergaso](https://eo.wikipedia.org/wiki/Kunpremita_tergaso): 5
+- [Lakmuso](https://eo.wikipedia.org/wiki/Lakmuso): 2
+- [Lentisko](https://eo.wikipedia.org/wiki/Lentisko): 1
+- [Leĝo de Boyle](https://eo.wikipedia.org/wiki/Le%C4%9Do_de_Boyle): 1
+- [Leĝo de Faraday](https://eo.wikipedia.org/wiki/Le%C4%9Do_de_Faraday): 4
+- [Leĝo de la difinitaj proporcioj](https://eo.wikipedia.org/wiki/Le%C4%9Do_de_la_difinitaj_proporcioj): 3
+- [Linoleumo](https://eo.wikipedia.org/wiki/Linoleumo): 3
+- [Listo da R-Deklaroj](https://eo.wikipedia.org/wiki/Listo_da_R-Deklaroj): 1
+- [Listo da S-Deklaroj](https://eo.wikipedia.org/wiki/Listo_da_S-Deklaroj): 1
+- [Listo de E-numeroj](https://eo.wikipedia.org/wiki/Listo_de_E-numeroj): 1
+- [Ludwig Wilhelm Gilbert](https://eo.wikipedia.org/wiki/Ludwig_Wilhelm_Gilbert): 3
+- [Malfrostilo](https://eo.wikipedia.org/wiki/Malfrostilo): 1
+- [Malmola akvo](https://eo.wikipedia.org/wiki/Malmola_akvo): 2
+- [Maria la Judino](https://eo.wikipedia.org/wiki/Maria_la_Judino): 3
+- [Martin Crusius](https://eo.wikipedia.org/wiki/Martin_Crusius): 5
+- [Materistato](https://eo.wikipedia.org/wiki/Materistato): 3
+- [Medalo Davy](https://eo.wikipedia.org/wiki/Medalo_Davy): 2
+- [Melamino](https://eo.wikipedia.org/wiki/Melamino): 2
+- [Metala hidrogeno](https://eo.wikipedia.org/wiki/Metala_hidrogeno): 5
+- [Metalo](https://eo.wikipedia.org/wiki/Metalo): 5
+- [Metilergometrino](https://eo.wikipedia.org/wiki/Metilergometrino): 1
+- [Meza industria lernejo kemia de akademiano Heyrovský](https://eo.wikipedia.org/wiki/Meza_industria_lernejo_kemia_de_akademiano_Heyrovsk%C3%BD): 3
+- [Mezurcilindro](https://eo.wikipedia.org/wiki/Mezurcilindro): 1
+- [Minimuma formulo](https://eo.wikipedia.org/wiki/Minimuma_formulo): 4
+- [Molekula maso](https://eo.wikipedia.org/wiki/Molekula_maso): 3
+- [Molekulo](https://eo.wikipedia.org/wiki/Molekulo): 5
+- [Molekuloj (libro)](https://eo.wikipedia.org/wiki/Molekuloj_%28libro%29): 1
+- [Nafta rafinejo](https://eo.wikipedia.org/wiki/Nafta_rafinejo): 1
+- [Natria nitrato](https://eo.wikipedia.org/wiki/Natria_nitrato): 1
+- [Nicolae Teclu](https://eo.wikipedia.org/wiki/Nicolae_Teclu): 3
+- [Noca](https://eo.wikipedia.org/wiki/Noca): 3
+- [Norma stato](https://eo.wikipedia.org/wiki/Norma_stato): 3
+- [Nuklea ĥemio](https://eo.wikipedia.org/wiki/Nuklea_%C4%A5emio): 5
+- [Okopa regulo](https://eo.wikipedia.org/wiki/Okopa_regulo): 2
+- [Oksalito](https://eo.wikipedia.org/wiki/Oksalito): 1
+- [Oksidanto](https://eo.wikipedia.org/wiki/Oksidanto): 2
+- [Oksidigo](https://eo.wikipedia.org/wiki/Oksidigo): 5
+- [Oksidiĝa nombro](https://eo.wikipedia.org/wiki/Oksidi%C4%9Da_nombro): 5
+- [Oligoelemento](https://eo.wikipedia.org/wiki/Oligoelemento): 2
+- [Oliviero Carafa](https://eo.wikipedia.org/wiki/Oliviero_Carafa): 5
+- [Perioda tabelo](https://eo.wikipedia.org/wiki/Perioda_tabelo): 5
+- [Peroksido](https://eo.wikipedia.org/wiki/Peroksido): 3
+- [Peter Scharff](https://eo.wikipedia.org/wiki/Peter_Scharff): 4
+- [Plantoĥemio](https://eo.wikipedia.org/wiki/Planto%C4%A5emio): 2
+- [Porfirino](https://eo.wikipedia.org/wiki/Porfirino): 5
+- [PubChem](https://eo.wikipedia.org/wiki/PubChem): 5
+- [Pureks-procedo](https://eo.wikipedia.org/wiki/Pureks-procedo): 5
+- [Racemaĵo](https://eo.wikipedia.org/wiki/Racema%C4%B5o): 1
+- [Reakcianto](https://eo.wikipedia.org/wiki/Reakcianto): 3
+- [Regulo de entjera nombro](https://eo.wikipedia.org/wiki/Regulo_de_entjera_nombro): 1
+- [Reĝakvo](https://eo.wikipedia.org/wiki/Re%C4%9Dakvo): 1
+- [Rusia Kemia-Teĥnologia Universitato](https://eo.wikipedia.org/wiki/Rusia_Kemia-Te%C4%A5nologia_Universitato): 3
+- [Rusto](https://eo.wikipedia.org/wiki/Rusto): 1
+- [Rutino (kemio)](https://eo.wikipedia.org/wiki/Rutino_%28kemio%29): 3
+- [Saleta akvo](https://eo.wikipedia.org/wiki/Saleta_akvo): 1
+- [Sedimentado](https://eo.wikipedia.org/wiki/Sedimentado): 3
+- [Sekvestranto (kemio)](https://eo.wikipedia.org/wiki/Sekvestranto_%28kemio%29): 1
+- [Simplified molecular-input line-entry system](https://eo.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system): 3
+- [Singaso-sunreaktoro](https://eo.wikipedia.org/wiki/Singaso-sunreaktoro): 2
+- [Sintezita kaŭĉuko](https://eo.wikipedia.org/wiki/Sintezita_ka%C5%AD%C4%89uko): 1
+- [Sorbo](https://eo.wikipedia.org/wiki/Sorbo): 1
+- [Sorona](https://eo.wikipedia.org/wiki/Sorona): 1
+- [Stato](https://eo.wikipedia.org/wiki/Stato): 1
+- [Stelŝprucilo](https://eo.wikipedia.org/wiki/Stel%C5%9Dprucilo): 5
+- [Strukturiĝo de atomoj](https://eo.wikipedia.org/wiki/Strukturi%C4%9Do_de_atomoj): 5
+- [Strukturo](https://eo.wikipedia.org/wiki/Strukturo): 2
+- [Surardaĵa promeno](https://eo.wikipedia.org/wiki/Surarda%C4%B5a_promeno): 3
+- [Teoria ĥemio](https://eo.wikipedia.org/wiki/Teoria_%C4%A5emio): 5
+- [Teĥnika ĥemio](https://eo.wikipedia.org/wiki/Te%C4%A5nika_%C4%A5emio): 1
+- [Triacetato](https://eo.wikipedia.org/wiki/Triacetato): 3
+- [VSEPR-teorio](https://eo.wikipedia.org/wiki/VSEPR-teorio): 2
+- [Valentelektrono](https://eo.wikipedia.org/wiki/Valentelektrono): 4
+- [Valento (ĥemio)](https://eo.wikipedia.org/wiki/Valento_%28%C4%A5emio%29): 5
+- [Vehiklo](https://eo.wikipedia.org/wiki/Vehiklo): 4
+- [Wenceslaus Johann Gustav Karsten](https://eo.wikipedia.org/wiki/Wenceslaus_Johann_Gustav_Karsten): 5
+- [Árpád Máthé](https://eo.wikipedia.org/wiki/%C3%81rp%C3%A1d_M%C3%A1th%C3%A9): 2
+- [Ĥemia ekvacio](https://eo.wikipedia.org/wiki/%C4%A4emia_ekvacio): 4
+- [Ĥemia evoluo](https://eo.wikipedia.org/wiki/%C4%A4emia_evoluo): 1
+- [Ĥemia industrio](https://eo.wikipedia.org/wiki/%C4%A4emia_industrio): 1
+- [Ĥemia reakcio](https://eo.wikipedia.org/wiki/%C4%A4emia_reakcio): 5
+- [Ĥemia simbolo](https://eo.wikipedia.org/wiki/%C4%A4emia_simbolo): 1
+- [Ĥemia substanco](https://eo.wikipedia.org/wiki/%C4%A4emia_substanco): 1
+- [Ĥemiisto](https://eo.wikipedia.org/wiki/%C4%A4emiisto): 1
+- [Ĥemisintezo](https://eo.wikipedia.org/wiki/%C4%A4emisintezo): 1
