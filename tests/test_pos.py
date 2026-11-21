@@ -69,9 +69,19 @@ def test_conjunciones():
     assert etiquetar("se") == "SCONJ"
 
 
+def test_cu_es_subordinante_aunque_tambien_sea_particula():
+    # "ĉu" está en las partículas de stopwords.py y en las subordinantes: debe ganar SCONJ
+    assert etiquetar("ĉu") == "SCONJ"
+
+
 def test_numeros():
     for palabra in ["tri", "dudek", "tricent", "mil", "2020", "3,14"]:
         assert etiquetar(palabra) == "NUM", palabra
+
+
+def test_ordinales_con_cifras_son_adjetivos():
+    for palabra in ["1987-a", "20-an", "3-aj", "21a"]:
+        assert etiquetar(palabra) == "ADJ", palabra
 
 
 def test_puntuacion():

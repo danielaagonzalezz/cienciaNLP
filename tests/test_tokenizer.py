@@ -21,6 +21,12 @@ def test_formulas_y_numeros():
     assert textos("H2O y 3,14.") == ["H2O", "y", "3,14", "."]
 
 
+def test_ordinales_con_cifras_juntos():
+    assert textos("la 1987-a jaro") == ["la", "1987-a", "jaro"]
+    assert textos("la 20-an de majo") == ["la", "20-an", "de", "majo"]
+    assert textos("paĝoj 12-15") == ["paĝoj", "12", "-", "15"]  # un rango no es un ordinal
+
+
 def test_posiciones():
     texto = "La  akvo"
     for token, pos in tokenize(texto):
