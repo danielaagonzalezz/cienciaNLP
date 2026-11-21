@@ -6,7 +6,8 @@ NOUN, ADJ, ADV, VERB, PRON, DET, ADP, CCONJ, SCONJ, NUM, PUNCT y X (desconocido)
 En esperanto la categoría de casi todas las palabras se deduce de su terminación,
 así que el etiquetador sigue este orden:
 
-1. Puntuación y números.
+1. Puntuación, números y ordinales escritos con cifras (``1987-a``, ``20-an``). Los
+   ordinales son ``ADJ``, como en Universal Dependencies: se declinan como un adjetivo.
 2. Palabras de clase cerrada (artículo, pronombres, preposiciones, conjunciones,
    correlativos, numerales...). Se miran antes que las terminaciones, porque no
    siguen la regla: ``kio`` acaba en -o y no es un sustantivo.
@@ -47,6 +48,7 @@ ADVERBIOS_EXTRA = {"tamen"}
 # Numerales compuestos: dudek, tricent, mil, kvarmil...
 NUMERAL_COMPUESTO = re.compile(r"(?:(?:unu|du|tri|kvar|kvin|ses|sep|ok|naŭ)?(?:dek|cent|mil))+")
 NUMERO = re.compile(r"\d+(?:[.,]\d+)*")
+ORDINAL = re.compile(r"\d+-?aj?n?")  # 1987-a, 20-an, 21a
 
 # Sustantivos y adjetivos: base en -o / -a con plural (-j) y acusativo (-n) opcionales.
 NOMBRE_O_ADJETIVO = re.compile(r"(.+)([ao])j?n?")
@@ -68,7 +70,8 @@ def _construir_tabla() -> dict:
     anadir(PREPOSICIONES, "ADP")
     anadir(COORDINANTES, "CCONJ")
     anadir(SUBORDINANTES, "SCONJ")
-    anadir(PARTICULAS_Y_ADVERBIOS | ADVERBIOS_EXTRA, "ADV")
+    # "ĉu" también está en las partículas de stopwords.py: se quita aquí para que no la sobrescriba como ADV.
+    anadir((PARTICULAS_Y_ADVERBIOS | ADVERBIOS_EXTRA) - SUBORDINANTES, "ADV")
     anadir(NUMERALES, "NUM")
     anadir(VERBO_ESTI, "VERB")
 
@@ -100,6 +103,8 @@ def etiquetar(palabra: str) -> str:
         return "PUNCT"
     if NUMERO.fullmatch(w):
         return "NUM"
+    if ORDINAL.fullmatch(w):
+        return "ADJ"  # 1987-a: ordinal, se declina como un adjetivo
     if w in TABLA:
         return TABLA[w]
     if NUMERAL_COMPUESTO.fullmatch(w):

@@ -3,7 +3,8 @@
 import re
 
 PATRON = re.compile(
-    r"\d+(?:[.,]\d+)+"  # número con decimales: 3,14
+    r"\d+-aj?n?(?![^\W_])"  # ordinal con cifras: 1987-a, 20-an (sin partirlo en 1987 / - / a)
+    r"|\d+(?:[.,]\d+)+"  # número con decimales: 3,14
     r"|[^\W_]+"         # palabra o fórmula: akvo, ĉirkaŭ, H2O
     r"|\S"              # cualquier otro símbolo suelto: , . ( ) -
 )

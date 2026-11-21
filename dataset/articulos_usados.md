@@ -2,7 +2,7 @@
 
 Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos un párrafo a `dataset/dataset.csv` (ya limpio). La genera `scripts/clean_dataset.py` a partir de `dataset/origen.csv`, que escribe `scripts/build_dataset.py`.
 
-## fiziko: 123 artículos, 372 párrafos
+## fiziko: 123 artículos, 368 párrafos
 
 - [Aerodinamiko](https://eo.wikipedia.org/wiki/Aerodinamiko): 1
 - [Aeroĝelo](https://eo.wikipedia.org/wiki/Aero%C4%9Delo): 4
@@ -46,7 +46,7 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Frekvenco](https://eo.wikipedia.org/wiki/Frekvenco): 5
 - [Fulmoŝirmilo](https://eo.wikipedia.org/wiki/Fulmo%C5%9Dirmilo): 1
 - [Fundamenta forto](https://eo.wikipedia.org/wiki/Fundamenta_forto): 5
-- [Gas-ŝargiga lampo](https://eo.wikipedia.org/wiki/Gas-%C5%9Dargiga_lampo): 3
+- [Gas-ŝargiga lampo](https://eo.wikipedia.org/wiki/Gas-%C5%9Dargiga_lampo): 2
 - [Gorĝa kantado](https://eo.wikipedia.org/wiki/Gor%C4%9Da_kantado): 2
 - [Grajo](https://eo.wikipedia.org/wiki/Grajo): 4
 - [Grando](https://eo.wikipedia.org/wiki/Grando): 2
@@ -122,13 +122,13 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Telefonio](https://eo.wikipedia.org/wiki/Telefonio): 3
 - [Teoremo de Bell](https://eo.wikipedia.org/wiki/Teoremo_de_Bell): 4
 - [Teoria fiziko](https://eo.wikipedia.org/wiki/Teoria_fiziko): 5
-- [Tesla transformatoro](https://eo.wikipedia.org/wiki/Tesla_transformatoro): 4
+- [Tesla transformatoro](https://eo.wikipedia.org/wiki/Tesla_transformatoro): 1
 - [Troleo](https://eo.wikipedia.org/wiki/Troleo): 2
 - [Vektopesilo](https://eo.wikipedia.org/wiki/Vektopesilo): 1
 - [Vibrado](https://eo.wikipedia.org/wiki/Vibrado): 1
 - [Voĉkordoj](https://eo.wikipedia.org/wiki/Vo%C4%89kordoj): 2
 
-## biologio: 151 artículos, 385 párrafos
+## biologio: 151 artículos, 372 párrafos
 
 - [Akselo](https://eo.wikipedia.org/wiki/Akselo): 2
 - [Algoscienco](https://eo.wikipedia.org/wiki/Algoscienco): 2
@@ -152,7 +152,7 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Biologia specimeno](https://eo.wikipedia.org/wiki/Biologia_specimeno): 1
 - [Biomaso (ekologio)](https://eo.wikipedia.org/wiki/Biomaso_%28ekologio%29): 2
 - [Biomeĥaniko](https://eo.wikipedia.org/wiki/Biome%C4%A5aniko): 2
-- [Bisino](https://eo.wikipedia.org/wiki/Bisino): 3
+- [Bisino](https://eo.wikipedia.org/wiki/Bisino): 1
 - [Boko](https://eo.wikipedia.org/wiki/Boko): 2
 - [Bonfarto (biologio)](https://eo.wikipedia.org/wiki/Bonfarto_%28biologio%29): 5
 - [Breakthrough Listen](https://eo.wikipedia.org/wiki/Breakthrough_Listen): 5
@@ -169,11 +169,11 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Ekoregionoj en Aŭstralio](https://eo.wikipedia.org/wiki/Ekoregionoj_en_A%C5%ADstralio): 2
 - [Elspiro](https://eo.wikipedia.org/wiki/Elspiro): 3
 - [Eltena kapacito](https://eo.wikipedia.org/wiki/Eltena_kapacito): 3
-- [Enkruciĝo](https://eo.wikipedia.org/wiki/Enkruci%C4%9Do): 4
+- [Enkruciĝo](https://eo.wikipedia.org/wiki/Enkruci%C4%9Do): 3
 - [Enspiro](https://eo.wikipedia.org/wiki/Enspiro): 2
 - [Evolucio (teorio)](https://eo.wikipedia.org/wiki/Evolucio_%28teorio%29): 5
 - [Evoluo](https://eo.wikipedia.org/wiki/Evoluo): 5
-- [Flanka linio](https://eo.wikipedia.org/wiki/Flanka_linio): 4
+- [Flanka linio](https://eo.wikipedia.org/wiki/Flanka_linio): 1
 - [Flava makulo](https://eo.wikipedia.org/wiki/Flava_makulo): 1
 - [Formulo de Drake](https://eo.wikipedia.org/wiki/Formulo_de_Drake): 5
 - [GFAJ-1](https://eo.wikipedia.org/wiki/GFAJ-1): 2
@@ -190,7 +190,7 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Intermama fendo](https://eo.wikipedia.org/wiki/Intermama_fendo): 1
 - [Irisrekono](https://eo.wikipedia.org/wiki/Irisrekono): 5
 - [Jean Héroard](https://eo.wikipedia.org/wiki/Jean_H%C3%A9roard): 5
-- [John Hunter](https://eo.wikipedia.org/wiki/John_Hunter): 3
+- [John Hunter](https://eo.wikipedia.org/wiki/John_Hunter): 2
 - [Kadavrodonaco](https://eo.wikipedia.org/wiki/Kadavrodonaco): 3
 - [Kalao](https://eo.wikipedia.org/wiki/Kalao): 1
 - [Kamuflado](https://eo.wikipedia.org/wiki/Kamuflado): 2
@@ -232,22 +232,22 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Piedsigno](https://eo.wikipedia.org/wiki/Piedsigno): 3
 - [Planeda loĝebleco](https://eo.wikipedia.org/wiki/Planeda_lo%C4%9Debleco): 1
 - [Pleŭro](https://eo.wikipedia.org/wiki/Ple%C5%ADro): 2
-- [Poliandrio](https://eo.wikipedia.org/wiki/Poliandrio): 4
+- [Poliandrio](https://eo.wikipedia.org/wiki/Poliandrio): 3
 - [Poliginio](https://eo.wikipedia.org/wiki/Poliginio): 2
 - [Populacibiologio](https://eo.wikipedia.org/wiki/Populacibiologio): 2
-- [Populaciekologio](https://eo.wikipedia.org/wiki/Populaciekologio): 4
+- [Populaciekologio](https://eo.wikipedia.org/wiki/Populaciekologio): 3
 - [Principo de mezumoj](https://eo.wikipedia.org/wiki/Principo_de_mezumoj): 5
-- [Promiskueco](https://eo.wikipedia.org/wiki/Promiskueco): 4
+- [Promiskueco](https://eo.wikipedia.org/wiki/Promiskueco): 3
 - [Rakio](https://eo.wikipedia.org/wiki/Rakio): 1
 - [Remburado (konservado de bestoj)](https://eo.wikipedia.org/wiki/Remburado_%28konservado_de_bestoj%29): 3
 - [Riĉiineoj](https://eo.wikipedia.org/wiki/Ri%C4%89iineoj): 1
 - [Robotiko biologia](https://eo.wikipedia.org/wiki/Robotiko_biologia): 3
-- [SETI@home](https://eo.wikipedia.org/wiki/SETI%40home): 4
+- [SETI@home](https://eo.wikipedia.org/wiki/SETI%40home): 2
 - [Saprofitismo](https://eo.wikipedia.org/wiki/Saprofitismo): 1
 - [Sekco (anatomio)](https://eo.wikipedia.org/wiki/Sekco_%28anatomio%29): 1
 - [Seksa duformismo](https://eo.wikipedia.org/wiki/Seksa_duformismo): 5
 - [Seksa maturiĝo](https://eo.wikipedia.org/wiki/Seksa_maturi%C4%9Do): 3
-- [Selekto](https://eo.wikipedia.org/wiki/Selekto): 2
+- [Selekto](https://eo.wikipedia.org/wiki/Selekto): 1
 - [Sesfingreco](https://eo.wikipedia.org/wiki/Sesfingreco): 3
 - [Simfizo](https://eo.wikipedia.org/wiki/Simfizo): 1
 - [Sino](https://eo.wikipedia.org/wiki/Sino): 1
@@ -282,7 +282,7 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Ĥondrocito](https://eo.wikipedia.org/wiki/%C4%A4ondrocito): 1
 - [Ĥordo (anatomio)](https://eo.wikipedia.org/wiki/%C4%A4ordo_%28anatomio%29): 1
 
-## kemio: 130 artículos, 362 párrafos
+## kemio: 129 artículos, 358 párrafos
 
 - [Atmosfera ĥemio](https://eo.wikipedia.org/wiki/Atmosfera_%C4%A5emio): 2
 - [Atomomaso](https://eo.wikipedia.org/wiki/Atomomaso): 2
@@ -310,7 +310,7 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Fluorita acido](https://eo.wikipedia.org/wiki/Fluorita_acido): 1
 - [Formulo kruda](https://eo.wikipedia.org/wiki/Formulo_kruda): 5
 - [Forto de Van-der-Waals](https://eo.wikipedia.org/wiki/Forto_de_Van-der-Waals): 3
-- [Frakcia kristaligo (kemio)](https://eo.wikipedia.org/wiki/Frakcia_kristaligo_%28kemio%29): 3
+- [Frakcia kristaligo (kemio)](https://eo.wikipedia.org/wiki/Frakcia_kristaligo_%28kemio%29): 2
 - [Frostopunkto](https://eo.wikipedia.org/wiki/Frostopunkto): 1
 - [Georg Simon Klügel](https://eo.wikipedia.org/wiki/Georg_Simon_Kl%C3%BCgel): 4
 - [Grzegorz Grzeban](https://eo.wikipedia.org/wiki/Grzegorz_Grzeban): 1
@@ -338,7 +338,7 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Linoleumo](https://eo.wikipedia.org/wiki/Linoleumo): 3
 - [Listo da R-Deklaroj](https://eo.wikipedia.org/wiki/Listo_da_R-Deklaroj): 1
 - [Listo da S-Deklaroj](https://eo.wikipedia.org/wiki/Listo_da_S-Deklaroj): 1
-- [Listo de E-numeroj](https://eo.wikipedia.org/wiki/Listo_de_E-numeroj): 2
+- [Listo de E-numeroj](https://eo.wikipedia.org/wiki/Listo_de_E-numeroj): 1
 - [Ludwig Wilhelm Gilbert](https://eo.wikipedia.org/wiki/Ludwig_Wilhelm_Gilbert): 3
 - [Malfrostilo](https://eo.wikipedia.org/wiki/Malfrostilo): 1
 - [Malmola akvo](https://eo.wikipedia.org/wiki/Malmola_akvo): 2
@@ -386,9 +386,8 @@ Lista exacta de los artículos de la Wikipedia en esperanto que aportan al menos
 - [Saleta akvo](https://eo.wikipedia.org/wiki/Saleta_akvo): 1
 - [Sedimentado](https://eo.wikipedia.org/wiki/Sedimentado): 3
 - [Sekvestranto (kemio)](https://eo.wikipedia.org/wiki/Sekvestranto_%28kemio%29): 1
-- [Simileco (kemio)](https://eo.wikipedia.org/wiki/Simileco_%28kemio%29): 1
 - [Simplified molecular-input line-entry system](https://eo.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system): 3
-- [Singaso-sunreaktoro](https://eo.wikipedia.org/wiki/Singaso-sunreaktoro): 3
+- [Singaso-sunreaktoro](https://eo.wikipedia.org/wiki/Singaso-sunreaktoro): 2
 - [Sintezita kaŭĉuko](https://eo.wikipedia.org/wiki/Sintezita_ka%C5%AD%C4%89uko): 1
 - [Sorbo](https://eo.wikipedia.org/wiki/Sorbo): 1
 - [Sorona](https://eo.wikipedia.org/wiki/Sorona): 1

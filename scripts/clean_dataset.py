@@ -1,4 +1,5 @@
-"""Limpia dataset/dataset.csv: quita repetidos, textos en dos clases y restos de fórmulas o enlaces.
+"""Limpia dataset/dataset.csv: quita repetidos, textos en dos clases, restos de fórmulas o enlaces y
+referencias bibliográficas.
 
 Guarda una copia del original en dataset/dataset_bruto.csv (no se sube al repositorio).
 Con dataset/origen.csv (lo crea build_dataset.py) escribe dataset/articulos_usados.md:
@@ -29,6 +30,19 @@ for texto, clase in filas:
     clases_de.setdefault(texto, set()).add(clase)
 
 sucio = re.compile(r"\\|[{}]|https?://|www\.|\[\d+\]|<[a-z/]")  # LaTeX, enlaces, referencias, HTML
+
+# Referencias bibliográficas y enlaces externos de las secciones "Referencoj" / "Eksteraj ligiloj".
+# No son párrafos sobre el tema (suelen estar en inglés), así que se quitan. Basta con que se cumpla una regla:
+bibliografia = re.compile(
+    r"Arkivigite je .{0,40}retarkivo"         # enlace archivado: "Arkivigite je 2009-05-01 per la retarkivo Wayback Machine"
+    r"|Arkivita el la originalo|\bAlirita (?:je |la )?\d"  # plantilla de cita: "Arkivita el la originalo je ... Alirita 2006-01-23"
+    r"|ISBN|PMID|\bdoi\b"                     # identificadores de libros y artículos
+    r"|\b(?:pp|Vol)\. \d"                     # páginas y volumen: "pp. 551", "Vol. 271"
+    r"|\bet al\.|\beds?\.[,)]|\(Eds?\.?\)|\b[Ii]n: "  # "et al.", editores ("eds.", "(Eds)") y "in: <libro o revista>"
+    r"|^(?:[A-Z][\w'’-]+,? (?:[A-Z][a-z]*\.? ?)+[,&]* ?(?:and )?)+\(?(?:1[6-9]|20)\d\d\)?[.\s]"  # empieza por autores y año: "Kareiva, Peter (1989)."
+    r"|^(?:[A-Z][\w-]+ [A-Z]{1,3}, ){2,}"     # lista de autores abreviada: "Chueh WC, Falter C, Abbott M, ..."
+)
+
 limpias, vistos, descartadas = [], set(), Counter()
 for texto, clase in filas:
     if len(clases_de[texto]) > 1:
@@ -37,6 +51,8 @@ for texto, clase in filas:
         descartadas["repetido"] += 1
     elif sucio.search(texto):
         descartadas["fórmula, enlace o referencia"] += 1
+    elif bibliografia.search(texto):
+        descartadas["referencia bibliográfica"] += 1
     else:
         vistos.add(texto)
         limpias.append((texto, clase))
